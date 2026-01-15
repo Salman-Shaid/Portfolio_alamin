@@ -3,6 +3,7 @@
 import { ParticleCanvas } from "@/hooks/particle";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import { TbHandClick } from "react-icons/tb";
 
 
 export default function Hero() {
@@ -66,24 +67,26 @@ export default function Hero() {
 
                         </motion.p>
 
-                        <motion.button
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 1.2 }}
-                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                            className="relative overflow-hidden px-8 py-4 rounded-full bg-surface border
-       border-white/10 hover:border-primary/30 transition-all group"
-                        >
-                            <span className="text-content group-hover:text-primary transition-colors">
-                                Explore Work
-                            </span>
-                            <div
-                                className="absolute inset-0 bg-gradient-to-r 
-        from-primary/10 to-tertiary/10 opacity-0
-        group-hover:opacity-100 transition-opacity"
-                            />
+                        <a href="/AlaminHasan.pdf" download>
+                            <motion.button
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 1.2 }}
+                                whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                                className="relative overflow-hidden px-8 py-4 rounded-full bg-surface border
+          border-white/10 hover:border-primary/30 transition-all group w-full sm:w-auto"
+                            >
+                                <span className="text-content group-hover:text-primary transition-colors flex items-center justify-center">
+                                    <TbHandClick size={20} className="mr-2" /> Download CV
+                                </span>
 
-                        </motion.button>
+                                <div
+                                    className="absolute inset-0 bg-gradient-to-r 
+            from-primary/10 to-tertiary/10 opacity-0
+            group-hover:opacity-100 transition-opacity rounded-full"
+                                />
+                            </motion.button>
+                        </a>
 
                     </motion.div>
                     {/* Image Card */}
